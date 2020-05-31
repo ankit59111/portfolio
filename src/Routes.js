@@ -11,7 +11,7 @@ export default function Routes(props) {
         <BrowserRouter basename={'/portfolio'}>
             <Switch>
                 <Route path={'/'} exact render={(props)=><App {...props}/>}/>
-                <Route path={'/resume'} exact render={(props)=><Resume {...props}/>}/>
+                <Route path={'/myresume'} exact render={(props)=><Resume {...props}/>}/>
             </Switch>
         </BrowserRouter>
     )
