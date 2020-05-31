@@ -58,7 +58,7 @@
 .resume-sideBar .skills-info .skills-list .progress .progress-bar{
     background: #fff;
 }
-section{
+section.resume-content{
     margin-left: 25px;
     width: 500px;
     word-break: break-all;

@@ -83,7 +83,7 @@ export default function Resume(props) {
 
                 </div>
             </div>
-            <section>
+            <section className='resume-content'>
                 <p>
                     A curious person always ready to implement new stuff and extend my limits.
                     Work and results inspire me. Seeking a challenging position in a technical role.
