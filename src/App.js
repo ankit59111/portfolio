@@ -10,6 +10,7 @@ const CONSTANTS = {
     TYPING_SPEED: 150,
 }
 export default function App(props) {
+    console.log('came to app comp');
     const [state, setState] = useState({
         text: "",
         message: "",
@@ -66,8 +67,6 @@ export default function App(props) {
             ? CONSTANTS.TYPING_SPEED
             : CONSTANTS.DELETING_SPEED;
     }
-
-
     return (
         <div className='container-fluid home'>
             <section className="hero-image" id="top">
