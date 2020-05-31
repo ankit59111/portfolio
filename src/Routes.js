@@ -8,7 +8,7 @@ export default function Routes(props) {
     console.log('came to routes');
     return(
 
-        <BrowserRouter basename={'/'}>
+        <BrowserRouter basename={'/portfolio'}>
             <Switch>
                 <Route path={'/'} exact render={(props)=><App {...props}/>}/>
                 <Route path={'/resume'} exact render={(props)=><Resume {...props}/>}/>
