@@ -105,7 +105,7 @@ export default function App(props) {
                             <a className="nav-link" href="#about" style={{"color": "black"}}>About</a>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/myresume/"
+                            <NavLink className="nav-link" to="/resume/"
                                style={{"color": "black"}}>Resume</NavLink>
                         </li>
                         <li className="nav-item">
