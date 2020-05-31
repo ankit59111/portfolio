@@ -3,6 +3,7 @@ import './App.css';
 import html2pdf from "html2pdf.js";
 
 export default function Resume(props) {
+    console.log('resume page came')
     useEffect(() => {
         const element = document.getElementById('root');
         let opt = {
