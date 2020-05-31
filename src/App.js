@@ -3,14 +3,17 @@ import './App.css';
 import profile from './assets/images/profile.jpeg';
 import india from './assets/images/india.png';
 import {NavLink} from "react-router-dom";
+import nodemailer from 'nodemailer';
 
-
+//sgMail.setApiKey(process.env.MAIL_KEY);
 const CONSTANTS = {
     DELETING_SPEED: 30,
     TYPING_SPEED: 150,
 }
 export default function App(props) {
     console.log('came to app comp');
+    let mailKey  = process.env.MAIL_KEY;
+    console.log(mailKey);
     const [state, setState] = useState({
         text: "",
         message: "",
@@ -66,6 +69,37 @@ export default function App(props) {
         return currentState.isDeleting
             ? CONSTANTS.TYPING_SPEED
             : CONSTANTS.DELETING_SPEED;
+    }
+    async function sendEmail(e) {
+        e.preventDefault();
+        let testAccount = await nodemailer.createTestAccount();
+        let transporter = nodemailer.createTransport({
+            host: "smtp.ethereal.email",
+            port: 587,
+            secure: false, // true for 465, false for other ports
+            auth: {
+                user: testAccount.user, // generated ethereal user
+                pass: testAccount.pass, // generated ethereal password
+            },
+        });
+        let info = await transporter.sendMail({
+            from: 'ankit.singh@indianexpress.com', // sender address
+            to: "ankitsingh5991111@gmail.com", // list of receivers
+            subject: "Hello ✔", // Subject line
+            text: "Hello world?", // plain text body
+            html: "<b>Hello world?</b>", // html body
+        });
+        console.log("Message sent: %s", info.messageId);
+        console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+        // const msg = {
+        //     to: 'ankit.singh@indianexpress.com',
+        //     from: 'ankitsingh5991111@gmail.com',
+        //     subject: 'Sending with Twilio SendGrid is Fun',
+        //     text: 'and easy to do anywhere, even with Node.js',
+        //     html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+        // };
+        // sgMail.send(msg);
+
     }
     return (
         <div className='container-fluid home'>
@@ -172,7 +206,7 @@ export default function App(props) {
                                             will get back to you asap.</p>
                                 </div>
                                 <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12" style={{"margin-top": "30px"}}>
-                                    <form className="form" role="form" autoComplete="off" method="POST">
+                                    <form className="form" role="form" autoComplete="off" method="POST" onSubmit={sendEmail}>
                                         <fieldset>
                                             <label htmlFor="name2" className="mb-0">Name</label>
                                             <div className="row mb-1">

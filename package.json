@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "http://ankit59111.github.io/portfolio",
   "dependencies": {
+    "@sendgrid/mail": "^7.1.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
@@ -11,6 +12,7 @@
     "html2canvas": "^1.0.0-rc.5",
     "html2pdf.js": "^0.9.2",
     "jspdf": "^1.5.3",
+    "nodemailer": "^6.4.8",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router": "^5.2.0",
