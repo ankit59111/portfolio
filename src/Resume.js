@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import './App.css';
+import './Resume.css';
 import html2pdf from "html2pdf.js";
 
 export default function Resume(props) {
