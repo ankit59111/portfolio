@@ -6,7 +6,7 @@ import Resume from "./Resume";
 
 export default function Routes(props) {
     return(
-        <BrowserRouter>
+        <BrowserRouter basename={'/'}>
             <Switch>
                 <Route path={'/'} exact render={(props)=><App {...props}/>}/>
                 <Route path={'/resume'} exact render={(props)=><Resume {...props}/>}/>
