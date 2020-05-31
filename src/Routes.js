@@ -5,7 +5,6 @@ import App from "./App";
 import Resume from "./Resume";
 
 export default function Routes(props) {
-    console.log('came to routes');
     return(
 
         <BrowserRouter basename={'/portfolio'}>
