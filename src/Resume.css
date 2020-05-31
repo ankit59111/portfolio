@@ -1,0 +1,120 @@
+
+.resume-sideBar{
+    height: auto;
+    border: 1px solid;
+    width: 280px;
+    text-align: left;
+    background: #f67e7d;
+    color: #fff;
+    padding-top: 20px;
+    padding-bottom: 25px;
+    font-family: opensans;
+}
+.resume-sideBar .name{
+    padding-left: 14px;
+    font-weight: 700;
+}
+.resume-sideBar .title{
+    padding-left: 14px;
+}
+.resume-sideBar .personal-info,.skills-info{
+    position: relative;
+}
+.resume-sideBar .personal-info .heading{
+    border: 1px solid #EF9A9A;
+    width: 200px;
+    padding: 11px;
+    border-radius: 0 26px 26px 0;
+    margin-bottom: 15px;
+    background: #EF9A9A;
+}
+
+.resume-sideBar .personal-info p{
+    width: 235px;
+    word-break: break-all;
+    padding-left: 12px;
+    display: flex;
+}
+.resume-sideBar .personal-info p span{
+    padding-left: 12px;
+
+}
+
+.resume-sideBar .skills-info .heading{
+    border: 1px solid #EF9A9A;
+    width: 200px;
+    padding: 11px;
+    border-radius: 0 26px 26px 0;
+    margin-bottom: 15px;
+    background: #EF9A9A
+}
+.resume-sideBar .skills-info .skills-list{
+    padding: 12px;
+}
+.resume-sideBar .skills-info .skills-list .progress{
+    background: #e6e6e6;
+    border-radius: 1.25rem;
+}
+.resume-sideBar .skills-info .skills-list .progress .progress-bar{
+    background: #fff;
+}
+section{
+    margin-left: 25px;
+    width: 500px;
+    word-break: break-all;
+    padding-top: 20px;
+    font-family: opensans;
+}
+
+section .heading{
+    border-bottom: 2px solid #f67e7d;
+    color: #f67e7d;
+    padding-bottom: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+section .list-content .point-circle{
+    height: 10px;
+    width: 10px;
+    background-color: #f67e7b;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 7px;
+}
+section .list-content div{
+    border-bottom: 1px solid #f67e7b;
+    margin-bottom: 12px;
+}
+section .list-content div:last-child{
+    border-bottom: 0;
+}
+section .list-content div p{
+    padding-left: 18px;
+    color: #9E9E9E;
+}
+section .list-content p .education-title{
+    font-size: 16px;
+    font-weight: 600;
+}
+section .list-content p .education-name{
+    padding-left: 15px;
+    font-size: 13px;
+
+}
+section .list-content div ul{
+    padding-left: 30px;
+    list-style: none;
+}
+
+section .list-content div ul li::before {
+    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: #f67e7d; /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+
