@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react';
 import './Resume.css';
 import html2pdf from "html2pdf.js";
+import resume from './assets/resume.pdf';
 
 export default function Resume(props) {
     console.log('resume page came')
@@ -14,7 +15,7 @@ export default function Resume(props) {
             html2canvas: {scale: 1.1},
             jsPDF: {unit: 'pt', format: 'a4', orientation: 'p'}
         };
-        html2pdf().from(element).set(opt).save();
+       // html2pdf().from(element).set(opt).save();
     }, [])
     return (
         <div className='container d-flex flex-row' id={'resume-builder'}>
@@ -206,6 +207,9 @@ export default function Resume(props) {
                     </div>
                 </div>
             </section>
+            <a href={resume} download>
+                <button className='btn btn-danger download-btn'>Download here</button>
+            </a>
         </div>
     )
 

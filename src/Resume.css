@@ -117,4 +117,6 @@ section .list-content div ul li::before {
     margin-left: -1em; /* Also needed for space (tweak if needed) */
 }
 
-
+.download-btn{
+    border-radius: 15px;
+}
