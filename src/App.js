@@ -131,7 +131,7 @@ export default function App(props) {
                                         <h4 style={{"text-align": "center", "color":"#626262"}}>Who's this guy?</h4>
 
                                         <p className="ptext">
-                                            I'm a Front End Developer and Blockchain enthusiast based in India <img
+                                            I'm a Front End Developer based in India <img
                                             src={india}/>.<br/>
                                             I have serious passion for UI effects, animations and creating intuitive,
                                             dynamic user experiences.<br/>
