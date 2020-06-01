@@ -101,6 +101,19 @@ export default function App(props) {
         // sgMail.send(msg);
 
     }
+    function toggleClass(element, className) {
+        if (!element.classList.contains(className)) {
+            element.classList.add(className);
+        } else {
+            element.classList.remove(className);
+        }
+    }
+    function handleDropDown(e) {
+        let el = e.target.closest('#navbarDropDown');
+        let listel = el.nextElementSibling;
+        toggleClass(listel,'collapse');
+
+    }
     return (
         <div className='container-fluid home'>
             <section className="hero-image" id="top">
@@ -126,8 +139,8 @@ export default function App(props) {
                  style={{"background-color": "#EEEEEE", "min-height": "80px"}}>
                 <a className="navbar-brand mx-auto" href="#top"></a>
                 <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" id='navbarDropDown'
+                        aria-expanded="false" aria-label="Toggle navigation" onClick={handleDropDown}>
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
@@ -174,9 +187,11 @@ export default function App(props) {
                                         </p>
                                 </div>
                             </div>
-                            <br/><br/><br/>
+                            <br/>
                         </div>
             </section>
+            <br/>
+            <br/>
             <section className="footer_bg" id="contact">
                 <h1 className="footer_header">Contact Me</h1>
                 <br/>

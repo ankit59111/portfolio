@@ -59,7 +59,7 @@
     border: 5px solid #028BB1;
     border-radius: 50px;
     color: white;
-    width: 12%;
+    width: auto;
     margin-top: 15px;
 }
 
@@ -96,6 +96,9 @@
     border: 1px solid transparent;
     border-radius: .25rem;
 }
+#about{
+    height: 100vh;
+}
 #about .about{
     color: black;
     text-align: center;
@@ -104,11 +107,11 @@
 }
 #about .about-image{
     height: 50%;
-    width: 20%;
+    width: 50%;
     max-height: 100%;
     max-width: 100%;
     border-radius: 50%;
-    margin-left: 40%;
+    margin-left: 20%;
 }
 .ptext {
     color: black;
@@ -171,5 +174,12 @@
     .navbar-toggleable-sm .navbar-nav .nav-link {
         padding-right: .5rem;
         padding-left: .5rem;
+    }
+    #about{
+        height: auto;
+    }
+    #about .about-image{
+        width: 20%;
+        margin-left: 40%;
     }
 }
