@@ -254,6 +254,10 @@ export default function App(props) {
                             <br/>
                         </div>
             </section>
+            <h4>
+            <NavLink className="nav-link" to="/otptest/"
+                     style={{"color": "black"}}>TEst Otp</NavLink>
+            </h4>
         </div>
 )
 
