@@ -24,7 +24,7 @@ export function autoReadSMS(cb) {
                             .catch((e) => {
                                 console.log("error in then content");
                                 console.log(e.message);
-                                console.log(e.response);h
+                                console.log(e.response);
                             });
                     } catch (e) {
                         console.log("error in catch");
